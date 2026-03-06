@@ -36,6 +36,7 @@
 			loader.load( './app.json', async function ( text ) {
 
 				var player = new APP.Player();
+				window.player = player;
 				await player.load( JSON.parse( text ) );
 				player.setSize( window.innerWidth, window.innerHeight );
 				player.play();
