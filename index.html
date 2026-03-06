@@ -40,9 +40,8 @@
 				await player.load( JSON.parse( text ) );
 				player.setSize( window.innerWidth, window.innerHeight );
 				player.play();
-				document.addEventListener("mousemove", (e) => {
-  player.camera.rotation.y -= e.movementX * 0.002;
-  player.camera.rotation.x -= e.movementY * 0.002;
+				document.addEventListener("mousemove", (e)=>{
+  const cam = player.dom.playerCamera || player.camera;
 });
 
 				document.body.appendChild( player.dom );
