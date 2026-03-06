@@ -40,8 +40,8 @@
 				player.setSize( window.innerWidth, window.innerHeight );
 				player.play();
 				document.addEventListener("mousemove", (e) => {
-  camera.rotation.y += e.movementX * 0.002;
-  camera.rotation.x += e.movementY * 0.002;
+  player.camera.rotation.y -= e.movementX * 0.002;
+  player.camera.rotation.x -= e.movementY * 0.002;
 });
 
 				document.body.appendChild( player.dom );
